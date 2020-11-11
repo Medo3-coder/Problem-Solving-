@@ -1,0 +1,113 @@
+
+
+// print by ostream iterator  
+
+
+
+#include <iostream>
+#include <vector>
+#include<algorithm> 
+#include<iterator>  //<------
+using namespace std;
+
+
+
+int main()
+{
+    
+    vector <int> v = {1,2,3,4,5,6,7,8,9,10} ;
+   
+ 
+    copy(v.begin() , v.end() , ostream_iterator<int>(cout , " ") );
+    
+
+    return 0;
+}
+
+-------------------------------------------------------------------------
+// ordenary array 
+
+
+int main()
+{
+    
+    int  arr[] = {1,2,3,4,5} ;
+   
+
+    copy(arr , arr+5 , ostream_iterator<int>(cout , " ") );
+    
+
+    return 0;
+}
+
+
+--------------------------------------------------------------- 
+
+// to make allow to user to insert numbers 
+// cin to an array 
+
+
+
+int main()
+{
+    
+    vector <int> v;
+   
+ 
+    // to make cin 
+    // first prameter : دة بينبة الكمبيلر اني بعمل س ان 
+    // second parameter : دة بقي عبارة عن ديفلت كنستركتور بيأشر علي نهاية الاعداد اللي هعمل ليها س ان 
+    // third parameter : دة عشان يضيف كل العناصر داخل الفيكنور 
+
+      copy( istream_iterator<int>(cin) , istream_iterator<int>() , back_inserter(v) );         // to make cin we use (istream_iterator)
+    copy(v.begin() , v.end() , ostream_iterator<int>(cout , " ") );                            // to make cout we use (ostream_iterator)
+    
+
+    return 0;
+}
+
+
+output : it will take numbers without ending until press (q )
+
+
+
+
+-----------------------------------------------------------------------------------
+
+// هنعمل داخال وطباعة من فنكشن واحدة  بس  
+
+
+
+
+
+#include <iostream>
+#include <vector>
+#include<algorithm> 
+#include<iterator>  //<------
+using namespace std;
+
+
+
+int main()
+{
+    
+    vector <int> v;
+   cout << " Enter a sequance of integers "
+   << "(press q to quit ) : " << endl << "input : " ;
+ 
+
+      copy( istream_iterator<int>(cin) ,
+            istream_iterator<int>() ,
+            ostream_iterator<int>(cout , "\nInput : "));  // to make cin we use (istream_iterator)
+    
+    
+
+    return 0;
+}
+
+
+
+
+
+
+
