@@ -1,0 +1,36 @@
+/*
+
+min_element() :
+
+function is a library function of algorithm header,
+it is used to find the smallest element from the range, it accepts a container range [start, end] 
+and returns an (iterator) pointing to the element with the smallest value in the given range.
+
+*/
+
+
+
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+
+int main()
+{
+    
+
+vector <int> v = { 50,3,7,18,10,65};
+
+// min_element function  return a address 
+
+cout << *min_element(v.begin() , v.end()) <<endl;
+
+
+
+
+    return 0;
+}
+
+
