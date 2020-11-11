@@ -1,0 +1,45 @@
+
+
+
+1- minmax(a, b): This function returns a pair, in which 1st element is of minimum of the two elements and the 2nd element is maximum of 2 elements.
+
+2- minmax(array of elements): 
+
+This function returns similarly as 1st version. Only difference is that in this version, 
+the accepted argument is a list of integers/strings among which maximum and minimum are obtained. 
+Useful in cases when we need to find maximum and minimum elements in list without sorting
+
+
+
+
+
+
+
+
+#include <iostream>
+#include <vector>
+#include<algorithm> 
+using namespace std;
+
+
+int main()
+{
+    
+
+vector <int> v = { 50,3,7,18,10,65};
+
+// print to numbers
+
+
+ auto pair =  minmax_element(v.begin() , v.end()) ;
+
+// the first element is the min 
+cout << *pair.first <<endl;
+
+// the second element is the max 
+
+cout << *pair.second<<endl ; 
+
+
+    return 0;
+}
