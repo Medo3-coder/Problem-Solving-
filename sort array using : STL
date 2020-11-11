@@ -1,0 +1,24 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+
+int main()
+{
+    
+
+vector <int> v = { 50,3,7,18,10,65};
+
+sort (v.rbegin() , v.rend()); 
+
+// this is foreach loop
+
+for (auto it : v) 
+{
+    cout << it <<endl ;
+    
+}
+
+    return 0;
+}
