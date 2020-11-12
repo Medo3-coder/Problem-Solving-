@@ -1,0 +1,37 @@
+  
+  
+  
+#include <iostream>
+#include <algorithm>
+#include <list>
+using namespace std;
+
+int main()
+{
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  //----------------------------------------------list::unique()-----------------------
+                                                  
+                                                  /* list::unique()
+                                                   is an inbuilt function in C++ STL
+                                                   which removes all duplicate consecutive elements from the list.
+                                                   It works only on sorted list.
+                                                   
+                                                   Syntax : list_name.unique(BinaryPredicate name)
+                                                   */
+                                                   
+          list<int> m = {2,2,2,2,2,2,1,6,5} ;            
+          m.unique();                                  // output : 2 1 6 5
+          for (auto i : m) {
+              cout << i <<" " ;
+          }
+    return 0;
+    }
