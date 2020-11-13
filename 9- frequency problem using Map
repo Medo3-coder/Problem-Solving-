@@ -1,0 +1,37 @@
+
+#include <iostream>
+#include <algorithm>
+#include <map>
+#include <string>
+using namespace std;
+
+int main()
+{
+
+
+map <int , int> m;
+cout << "Enter Size Element : " ;
+int s ; 
+cin>> s ; 
+for (int i = 0 ; i < s ; i++)
+{
+    int n ; 
+    cin >> n ; //1   1 
+    m[n]++ ; // 2     // the elemnt will stored as key 
+}
+
+   for (auto i : m) {
+    cout << i.first << " => " << i.second <<endl; 
+    }
+
+/*
+output :    -1                                                                                                                          
+            -1                                                                                                                          
+             2                                                                                                                           
+             2                                                                                                                           
+            -1 => 2                                                                                                                     
+             2 => 2
+*/
+
+    return 0;
+}
