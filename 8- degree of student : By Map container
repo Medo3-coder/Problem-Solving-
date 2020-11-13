@@ -1,0 +1,38 @@
+#include <iostream>
+#include <algorithm>
+#include <map>
+#include <string>
+using namespace std;
+
+int main()
+{
+    // ---------print the student name and his degree------
+    
+    map<string , int> GradeByName ;
+    GradeByName.insert({"Ali" , 88});
+    GradeByName.insert({"Mohammd" , 10});
+    GradeByName.insert({"Mahmoud" , 50});
+    GradeByName.insert({"Yusuf" , 20});
+       
+       string n ;
+       cin >> n ;
+       int c = 0 ;  // counter
+        auto it = GradeByName.begin() ;
+        for( ;it !=GradeByName.end(); it++)
+        {
+            if(it->first == n) //if key = n break
+            {
+                cout<<"The Grade Is -> " <<it->second<<endl;  // second = degree of student 
+                c++;
+                break;
+                
+            }
+            
+            
+        }
+  if(c==0)
+{
+    cout<<" The Name Is Not Found "<<endl;
+}
+    return 0;
+}
